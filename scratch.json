@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": -60.44,
+        "lat": -31.78
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "cielo claro",
+            "icon": "01n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 29.78,
+        "feels_like": 31.58,
+        "temp_min": 29.44,
+        "temp_max": 30,
+        "pressure": 1009,
+        "humidity": 58
+    },
+    "wind": {
+        "speed": 3.13,
+        "deg": 166,
+        "gust": 4.47
+    },
+    "clouds": {
+        "all": 2
+    },
+    "dt": 1579735094,
+    "sys": {
+        "type": 3,
+        "id": 2019862,
+        "country": "AR",
+        "sunrise": 1579684640,
+        "sunset": 1579734524
+    },
+    "timezone": -10800,
+    "id": 3837956,
+    "name": "San Benito",
+    "cod": 200
+}
