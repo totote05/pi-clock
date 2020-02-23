@@ -1,7 +1,5 @@
 <template>
   <div class="text-center" v-if="weather">
-    <!-- <img :src="weatherIcon" class="weather-icon"/>
-    {{ weather.weather[0].description }}<br/> -->
     <v-row align="center" justify="center">
       <v-img :src="weatherIcon"
         max-height="42"

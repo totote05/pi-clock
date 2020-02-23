@@ -1,5 +1,8 @@
 <template>
-    <div class="display-4 text-center">{{ clock }}</div>
+  <div class="text-center">
+    <span class="text-capitalize">{{ date }}</span><br/>
+    <span class="display-4">{{ clock }}</span>
+  </div>
 </template>
 
 <script>
@@ -12,6 +15,7 @@ export default {
   },
   computed: {
     clock () { return this.currentTime.toLocaleTimeString('es-AR') },
+    date () { return this.currentTime.toLocaleDateString('es-AR', { dateStyle: 'full' }) },
   },
   methods: {
     updateClock () {
