@@ -15,7 +15,7 @@ export default new Vuex.Store({
   },
   actions: {
     async fetchWeather ({ commit }) {
-      const url = 'http://api.openweathermap.org/data/2.5/weather?q='
+      const url = 'https://api.openweathermap.org/data/2.5/weather?q='
       const params = [
         'San%20Benito,ar',
         'APPID=5a770378691d649bdff7451684ba6dac',

@@ -14,7 +14,7 @@ export default {
     }
   },
   computed: {
-    clock () { return this.currentTime.toLocaleTimeString('es-AR') },
+    clock () { return this.currentTime.toLocaleTimeString('es-AR', { timeStyle: 'short' }) },
     date () { return this.currentTime.toLocaleDateString('es-AR', { dateStyle: 'full' }) },
   },
   methods: {
