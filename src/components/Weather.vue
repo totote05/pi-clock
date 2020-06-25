@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     ...mapGetters(['weather']),
-    weatherIcon () { return `http://openweathermap.org/img/wn/${this.weather.weather[0].icon}@2x.png` },
+    weatherIcon () { return `https://openweathermap.org/img/wn/${this.weather.weather[0].icon}@2x.png` },
     temp () { return Math.round(this.weather.main.temp) || '-' },
     tempFeels () { return Math.round(this.weather.main.feels_like) || '-' },
     humidity () { return Math.round(this.weather.main.humidity) || '-' },
