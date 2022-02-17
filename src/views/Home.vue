@@ -1,8 +1,10 @@
 <template>
   <v-container black fluid class="fill-height">
       <v-row align="center" justify="center">
-          <v-col cols="12">
+          <v-col cols="6">
             <clock />
+          </v-col>
+          <v-col cols="6">
             <weather/>
           </v-col>
       </v-row>

@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center">
+  <div class="text-right">
     <span class="text-capitalize">{{ date }}</span><br/>
     <span class="display-4">{{ clock }}</span>
   </div>

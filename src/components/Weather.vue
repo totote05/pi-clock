@@ -1,19 +1,26 @@
 <template>
-  <div class="text-center" v-if="weather">
-    <v-row align="center" justify="center">
-      <v-img :src="weatherIcon"
-        max-height="42"
-        max-width="42"
-        class="pa-0 ma-0"
-        aspect-ratio="1"
-        />
-      {{ weather.weather[0].description }}
+  <div class="text-left ml-8" v-if="weather">
+    <v-row align="center">
+
+      <div class="text-center d-flex-column">
+        <span
+          class="weather-icon"
+          :style="{background: `url(${weatherIcon})`}"
+        ></span>
+        <span class="weather-caption">
+          {{ weather.weather[0].description | capitalize }}
+        </span>
+      </div>
+
+      <div class="ml-4">
+        <v-icon>mdi-thermometer</v-icon>
+        <span class="temperature">{{ temp }}&deg;</span>/
+        {{ tempFeels }}&deg;<br/>
+        <v-icon>mdi-water</v-icon>
+        {{ humidity }}&percnt;
+      </div>
+
     </v-row>
-    <v-icon>mdi-thermometer</v-icon>
-    {{ temp }}&deg;/
-    {{ tempFeels }}&deg;<br/>
-    <v-icon>mdi-water</v-icon>
-    {{ humidity }}&percnt;
   </div>
 </template>
 
@@ -25,6 +32,13 @@ export default {
     return {
       interval: null,
     }
+  },
+  filters: {
+    capitalize (value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.charAt(0).toUpperCase() + value.slice(1)
+    },
   },
   computed: {
     ...mapGetters(['weather']),
@@ -47,8 +61,17 @@ export default {
 </script>
 
 <style scoped>
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .weather-icon {
-  max-width: 42px;
-  line-height: 1.5px;
+  width: 64px;
+  height: 64px;
+  background-position: center !important;
+}
+.temperature {
+  font-size: 3rem;
 }
 </style>
